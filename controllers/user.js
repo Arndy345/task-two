@@ -1,4 +1,4 @@
-const User = require("../model.js");
+const User = require("../model/model.js");
 const asyncWrapper = require("../middleware/asyncWrapper");
 const {
 	createCustomError,
@@ -13,7 +13,9 @@ const getAllUsers = asyncWrapper(
 const createUser = asyncWrapper(
 	async (req, res) => {
 		const user = await User.create(req.body);
-		res.status(201).json(user);
+		res
+			.status(201)
+			.json({ id: user._id, name: user.name });
 	}
 );
 
@@ -31,13 +33,14 @@ const getUser = asyncWrapper(
 				)
 			);
 		}
-		res.status(200).json({ user });
+		res
+			.status(200)
+			.json({ id: user._id, name: user.name });
 	}
 );
 const updateUser = async (req, res, next) => {
 	try {
 		const { id: userID } = req.params;
-		console.log(req.params);
 		const user = await User.findOneAndUpdate(
 			{ _id: userID },
 			req.body,
@@ -52,7 +55,7 @@ const updateUser = async (req, res, next) => {
 			);
 		}
 
-		res.status(200).json({ user });
+		res.status(200).json({ name: user.name });
 		return;
 	} catch (err) {
 		next(err);
@@ -73,7 +76,10 @@ const deleteUser = asyncWrapper(
 				)
 			);
 		}
-		res.status(200).json({ user });
+		res.status(200).json({
+			message: "User deleted",
+			name: user.name,
+		});
 	}
 );
 module.exports = {
