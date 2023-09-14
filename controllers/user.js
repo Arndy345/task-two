@@ -55,7 +55,7 @@ const updateUser = async (req, res, next) => {
 			);
 		}
 
-		res.status(200).json({ name: user.name });
+		res.status(201).json({ name: user.name });
 		return;
 	} catch (err) {
 		next(err);

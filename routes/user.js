@@ -9,7 +9,7 @@ const {
 
 router.route("/").post(createUser);
 
-router.route("/").get(getAllUsers);
+// router.route("/").get(getAllUsers);
 
 router
 	.route("/:id")

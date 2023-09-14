@@ -18,14 +18,28 @@
 ![MongoDB][mongodb]
 
 </div>
+
+## PREREQUISITES
+
+- Install [Node.js](https://nodejs.org/en/download/), [MongoDB](<(https://www.mongodb.com/docs/manual/installation/)>)
+
+---
+
 ## Clone this repo
 
 ```sh
 git clone https://github.com/Arndy345/task-two.git
 ```
+
+```sh
+cd task-two
+```
+
 ###Dependencies
+
 - Create a .env file
 - Add the MONGO_URI
+
 ## Install
 
 ```sh
@@ -38,19 +52,8 @@ npm install
 npm run start
 ```
 
-
-
-
 ---
 
-
-## Setup
-
-- Install [Node.js](https://nodejs.org/en/download/), [MongoDB](<(https://www.mongodb.com/docs/manual/installation/)>)
-- pull this repo
-- update env
-
----
 
 ## Base URL
 
@@ -61,15 +64,17 @@ https://adorable-wasp-girdle.cyclic.app/
 ---
 
 ## Readme Guides
+
 - [Model](./model/README.md)
 - [Route](./routes/README.md)
+
 ## Author
 
 👤 **Nonso Andrew**
 
 - Twitter: [@nonso_andy](https://twitter.com/nonso_andy)
 - Github: [@arndy345](https://github.com/arndy345)
-- Project Link: [Bloggerant](https://github.com/Arndy345/task-two)
+- Project Link: [USER_CRUD](https://github.com/Arndy345/task-two)
 
 <!-- Markdown Links & Images -->
 

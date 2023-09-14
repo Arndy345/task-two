@@ -13,7 +13,11 @@ app.use(express.static("./public"));
 app.use(express.json());
 //routes
 app.use("/api", user);
-
+app.get("/", (req, res) => {
+	res.send(
+		`Welcome to my api, click <a href="https://github.com/Arndy345/task-two">here</a> to get started `
+	);
+});
 app.use(notFound);
 app.use(errorHandler);
 const start = async () => {
