@@ -4,7 +4,7 @@
 
 > ### Signup User
 
-- Route: `/`
+- Route: `/api`
 - Method: `POST`
 - **Body:**
 
